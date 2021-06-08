@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #2e6092;
+  --color-primary-ultra-lite: #2e60928f;
+  --color-secondary: #f5c749;
+  --color-secondary-ultra-lite: #f1d790;
+
+  --color-white: #fff;
+  --color-grey: #eee;
+  --color-black: #000;
+
+  --font-primary: "Nunito", sans-serif;
+  --font-secondary: "Pacifico", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+  font-family: var(--font-primary);
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+li {
+  list-style-type: none;
+}
+
+.hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: dotted #ccc 0.5rem;
+  border-bottom: None;
+  width: 4%;
+  margin: 4rem 0;
+}
+
+.btn {
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-family: "Nunito";
+  border-radius: 50px;
+  background-color: var(--color-secondary);
+}
+
+.btn:active {
+  box-shadow: 0 0.1rem 0.3rem var(--color-secondary);
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.1rem 0.3rem var(--color-secondary);
+}
+
+.heading-primary {
+  font-size: 3rem;
+  margin: 1.5rem;
+  text-shadow: 0 0.01rem 0.2rem var(--color-primary);
+}
+
+.heading-secondary {
+  font-size: 2rem;
+}
+
+.h-center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------------HEADER---------------------------- */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 2rem 4rem;
+  /* box-shadow: 0 0.1rem 0.3rem var(--color-black); */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.header--onscroll {
+  position: fixed;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 2rem 4rem;
+  /* box-shadow: 0 0.1rem 0.3rem var(--color-black); */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu__item {
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.header__menu__item:hover {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-secondary-ultra-lite);
+}
+
+/* ----------------------------- HERO styles ---------------------------- */
+.hero {
+  text-align: center;
+  padding: 15rem 0 4rem;
+}
+
+.hero--onscroll {
+  margin-top: 15rem 0 4rem;
+}
+
+.hero__text {
+  font-size: 5rem;
+}
+
+/* ----------------------------- EDUCATION styles ------------------------- */
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education__list {
+  width: 35%;
+  text-align: center;
+}
+
+.education__list__item:not(:first-child) {
+  margin-top: 3.5rem;
+}
+
+.education__list__item:first-child {
+  margin-top: 0.5rem;
+}
+
+.education_list__item--icon {
+  font-size: 5rem;
+}
+
+/* --------------------------------------- SKILLS styles ---------------------------- */
+.table {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+td {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.skills__rating {
+  display: flex;
+}
+
+.skills__star {
+  color: var(--color-secondary);
+}
+
+
+
+/* --------------------------------------- PROJECTS styles --------------------------- */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__text {
+  font-weight: bold;
+  line-height: 2.5;
+}
+
+.projects__project__link {
+  color: var(--color-secondary);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* --------------------------------------- ACHIEVEMENTS styles -------------------------------- */
+.achievements {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.achievements__list__pointer,
+.hobbies__list__item {
+  color: var(--color-secondary);
+}
+
+/* --------------------------------------- HOBBIES styles --------------------------------------- */
+.hobbies {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------- FOOTER styles ----------------------------------- */
+.footer {
+  margin-top: 4rem;
+  background-color: #d3d3d3;
+  color: #8a8a8a;
+  padding: 1rem 2rem;
+  font-size: .8rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ----------------------------------------- KEYFRAMES ----------------------------------------------- */
+@media only screen and (max-width: 900px) {
+  .header__menu {
+    visibility: hidden;
+  }
+
+  .footer__social-links {
+    margin: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
